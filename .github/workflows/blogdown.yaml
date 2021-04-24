@@ -1,0 +1,44 @@
+# Triggered on push branch source
+on:
+  push:
+     branches:
+       - source
+
+# Name of the workflow - usethis::use_github_actions_badge("deployblog")
+name: deployblog
+
+# Set the job, the machine
+jobs:
+  deployblog:
+    name: Render and deploy blogdown
+    runs-on: ubuntu-18.04
+    steps:
+      # This action clones your repository from the respective branch that has triggered it
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+        # set-up an R installation in our GHA machine to run our scripts
+      - uses: r-lib/actions/setup-r@v1
+        # We will also need pandoc to compile our Shiny or RMarkdown report
+      - uses: r-lib/actions/setup-pandoc@v1
+        # Install R packages
+      - name: Install r packages
+        run: |
+          Rscript -e 'install.packages(c("remotes", "rmarkdown"))' \
+                  -e 'remotes::install_github("rstudio/blogdown")'
+      - name: install hugo
+        # Install Hugo
+        run: Rscript -e 'blogdown::install_hugo(extended = TRUE, version = "0.78.2")'
+      - name: Get themes
+        run: git submodule update --remote
+      - name: Look at files
+        run: ls ./public
+      - name: Render blog
+        run: Rscript -e 'blogdown::build_site(local = FALSE)'
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./public
