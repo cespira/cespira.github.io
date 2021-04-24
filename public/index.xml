@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Control Yourself</title>
+      <link>http://localhost:1313/post/2021-04-23-control-yoursefl/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2021-04-23-control-yoursefl/</guid>
+      <description>Anyone that has contact with marketing execution or measurement, at some point in life, encountered a dilemma or a colleague that suggested:
+ &amp;ldquo;How about we run this one without the control group hum?&amp;quot;  And here we are, discussing why this is, sometimes, a topic for arguing on marketing daily&amp;rsquo;s and plannings.
+I understand that having a holdout group can be challenging, sometimes even impossible (I&amp;rsquo;ll have a post on alternatives later), but not having it is way more risky then one can imagine.</description>
+    </item>
+    
+  </channel>
+</rss>
