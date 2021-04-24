@@ -7,8 +7,6 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Press Start 2P");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url("https://fonts.googleapis.com/css?family=Press Start 2P");
-@import url("https://fonts.googleapis.com/css?family=Raleway");
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -92,10 +90,6 @@ body {
     -webkit-transition: none !important;
     -ms-transition: none !important;
     transition: none !important; }
-
-/*Nosso codigo = lixo*/
-#intro h1 {
-  font-family: "Press Start 2P"; }
 
 /* Type */
 html {
@@ -2902,7 +2896,7 @@ table.alt tbody tr td {
 /*Nosso codigo = lixo*/
 #intro h1 {
   font-family: "Press Start 2P";
-  font-size: 65px;
+  font-size: 72px;
   text-align: center !important;
   margin-top: 10px; }
 
