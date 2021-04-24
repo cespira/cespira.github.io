@@ -1,6 +1,6 @@
 languageCode: en-us
 title: Posts
-baseURL: http://localhost:1313/
+baseURL: https://cespira.github.io/
 theme: hugo-theme-massively
 googleanalytics: ''
 disqusShortname: ''
