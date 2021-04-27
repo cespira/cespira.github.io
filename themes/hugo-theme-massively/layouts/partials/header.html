@@ -1,5 +1,6 @@
 <!-- Header -->
 <header id="header">
-    <a href='{{ "/" | relLangURL }}' class="logo">Rafael Cespi</a>
     {{ template "_internal/google_analytics.html" . }}
+    {{ partial "google/GA" . }}
+    <a href='{{ "/" | relLangURL }}' class="logo">Rafael Cespi</a>
 </header>
